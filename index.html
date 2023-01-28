@@ -1,0 +1,69 @@
+<html>
+<style>
+    body {
+        margin: 32px;
+        font-family: sans-serif;
+        font-size: 90%;
+        line-height: 160%;
+        background: #fafafa;
+    }
+
+    a {
+        text-decoration: none;
+        color: #0088ee;
+    }
+
+    table {
+        border: 1px solid #181818;
+        border-collapse: collapse;
+        font-size: 90%;
+    }
+
+    th, td {
+        border: 1px solid #181818;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #c0c0c0;
+    }
+
+    li {
+        margin-left: -16px;
+    }
+</style>
+
+<body>
+    <h2>HYDLIDE3 (MSX1) FM音源対応パッチ</h2>    
+    <p><a href="https://github.com/mmlbox/hyd2413">こちらのMGSデータ</a>を元に、MSX1版ハイドライド3のBGMをFMPACに対応するIPSパッチです。</p>
+    <h3>DOWNLOAD</h3>
+    <table>
+        <thead><tr><th>IPS</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr>
+                <td><a href="./patches/hyd3_r.ips">hyd3_r.ips</a></td>
+                <td>BGMがFM音源、効果音がPSGで再生されます。リズム音はチャカポコになります。</td>
+            </tr>
+            <tr>
+                <td><a href="./patches/hyd3_f.ips">hyd3_f.ips</a></td>
+                <td>BGMがFM音源、効果音がPSGで再生されます。リズム音はノイズ風になります。</td>
+            </tr>
+            <tr>
+                <td><a href="./patches/hyd3_fp1.ips">hyd3_fp1.ips</a></td>
+                <td>BGMがFM音源+PSGで再生されます。効果音は再生されません。</td>
+            </tr>
+            <tr>
+                <td><a href="./patches/hyd3_fp2.ips">hyd3_fp2.ips</a></td>
+                <td>OP/ED/街中など効果音が必要ない場所のBGMはFM音源+PSGで再生されます。<br>効果音が必要な場所の曲はFM音源のみで再生されます。</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>※本IPSはMSX1版専用です。MSX2版には対応していません。</p>
+    <h3>謝辞</h3>
+    <ul>
+        <li>IPSパッチは <a href="http://mdpc.dousetsu.com/">MSX研鑽推進委員会</a> さまにご制作いただきました。</li>
+        <li>楽曲の演奏には <a href="https://gigamix.hatenablog.com/entry/mgsdrv/">MGSDRV</a> を利用させていただいています。MGSDRV (C) Ain./Gigamix</li>
+    </ul>
+</body>
+
+</html>
