@@ -1,11 +1,27 @@
 <html>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P96L01NGEX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P96L01NGEX');
+    </script>
+</head>
 <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
     body {
-        margin: 32px;
         font-family: sans-serif;
-        font-size: 90%;
         line-height: 160%;
         background: #fafafa;
+        font-size: 14px;
+        color: rgb(36, 41, 47);
     }
 
     a {
@@ -13,19 +29,84 @@
         color: #0088ee;
     }
 
+    .page-header {
+        background-color: #181818;
+        padding: 32px;
+        color: white;
+    }
+
+    .content {
+        padding: 32px;
+    }
+
+    .sbox {
+        border-radius: 6px;
+        border: 1px solid rgb(208, 215, 222);
+        box-shadow: rgba(140, 149, 159, 0.15) 0px 3px 6px 0px;
+        overflow: hidden;
+        width: fit-content;
+    }
+
     table {
-        border: 1px solid #181818;
+        border-radius: 6px;
         border-collapse: collapse;
         font-size: 90%;
+        background-color: #fff;
+        overflow: hidden;
     }
 
-    th, td {
-        border: 1px solid #181818;
-        padding: 8px;
+    thead {
+        background-color: rgb(246, 248, 250);
+        border-bottom: 1px solid rgb(208, 215, 222)
     }
 
-    th {
-        background-color: #c0c0c0;
+    tr {
+        border-bottom: 1px solid rgb(208, 215, 222);
+    }
+
+    tr:last-child {
+        border-bottom: none;
+    }
+
+    th,
+    td {
+        padding: 1em 1em;
+    }
+
+    td:first-child {
+        text-align: center;
+    }
+
+    td:nth-child(2) {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 100%;
+        vertical-align: middle;
+    }
+
+    h1 .msx-music {
+        display: inline-block;
+        vertical-align: top;
+        background-image: url(./msx-music.svg);
+        background-size: 18px 18px;
+        background-position: center;
+        width: 18px;
+        height: 18px;
+    }
+
+    h2 {
+        margin-top: 2em;
+        font-size: 16px;
+        margin-bottom: 1em;
+    }
+
+    h3 {
+        margin-top: 2em;
+        font-size: 14px;
+        margin-bottom: 1em;
     }
 
     li {
@@ -34,36 +115,73 @@
 </style>
 
 <body>
-    <h2>HYDLIDE3 (MSX1) FM音源対応パッチ</h2>    
-    <p><a href="https://github.com/mmlbox/hyd2413">こちらのMGSデータ</a>を元に、MSX1版ハイドライド3のBGMをFMPACに対応するIPSパッチです。</p>
-    <h3>DOWNLOAD</h3>
-    <table>
-        <thead><tr><th>IPS</th><th>Description</th></tr></thead>
-        <tbody>
-            <tr>
-                <td><a href="./patches/hyd3_r.ips">hyd3_r.ips</a></td>
-                <td>BGMがFM音源のみで演奏されます。効果音はPSGで再生されます。<br>BGMのリズム音色は"チャカポコ"になります。</td>
-            </tr>
-            <tr>
-                <td><a href="./patches/hyd3_f.ips">hyd3_f.ips</a></td>
-                <td>BGMがFM音源のみで演奏されます。効果音はPSGで再生されます。<br>BGMのリズム音色はノイズ風になります。</td>
-            </tr>
-            <tr>
-                <td><a href="./patches/hyd3_fp1.ips">hyd3_fp1.ips</a></td>
-                <td>BGMがFM音源+PSGで演奏されます。効果音は再生されません。</td>
-            </tr>
-            <tr>
-                <td><a href="./patches/hyd3_fp2.ips">hyd3_fp2.ips</a></td>
-                <td>効果音が不要な場所(OP&ED,街,店など)では、BGMがFM音源+PSGで演奏されます。<br>それ以外の場所では、BGMをFM音源で、効果音がPSGで演奏されます。</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>※本IPSはMSX1版専用です。MSX2版には対応していません。</p>
-    <h3>謝辞</h3>
-    <ul>
-        <li>IPSパッチは <a href="http://mdpc.dousetsu.com/">MSX研鑽推進委員会</a> さまにご制作いただきました。</li>
-        <li>楽曲の演奏には <a href="https://gigamix.hatenablog.com/entry/mgsdrv/">MGSDRV</a> を利用させていただいています。MGSDRV (C) Ain./Gigamix</li>
-    </ul>
+    <div class="page-header">
+        <h1>HYDLIDE3 FMPAC Patch&nbsp;<div class="msx-music"></div>
+        </h1>
+    </div>
+    <div class="content">
+        <p><a href="https://github.com/mmlbox/hyd2413">こちらのMGS</a>を元に、MSX1版ハイドライド3のBGMをFMPACに対応するIPSパッチです。</p>
+        <h3>DOWNLOAD</h3>
+        <div class="sbox">
+            <table>
+                <thead>
+                    <tr>
+                        <th>TYPE</th>
+                        </th>
+                        <th>IPS</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FM+PSG</td>
+                        <td><a href="./patches/hyd3_fp2.ips" class="ips">hyd3_fp2.ips</a></td>
+                        <td>BGMがFM音源、効果音がPSGで演奏されます。<br>
+                            OPや街など効果音が必要ない場所では、BGMがFM音源+PSGで演奏されます。<br>
+                            どれをダウンロードしてよいか分からない場合はこちらをご利用ください。</td>
+                    </tr>
+                    <tr>
+                        <td>FM+RHYTHM</td>
+                        <td><a href="./patches/hyd3_r.ips" class="ips">hyd3_r.ips</a></td>
+                        <td>BGMが全曲FM音源のみで演奏されます。効果音はPSGで再生されます。<br>
+                            BGMのリズム音は"チャカポコ"になります。YM2413のファンの方にオススメ。</td>
+                    </tr>
+                    <tr>
+                        <td>FM+NOISE</td>
+                        <td><a href="./patches/hyd3_f.ips" class="ips">hyd3_f.ips</a></td>
+                        <td>BGMが全曲FM音源のみで演奏されます。効果音はPSGで再生されます。<br>
+                            BGMのリズム音はノイズ風音色になります。</td>
+                    </tr>
+                    <tr>
+                        <td>FM+PSG (NO SE)</td>
+                        <td><a href="./patches/hyd3_fp1.ips" class="ips">hyd3_fp1.ips</a></td>
+                        <td>BGMが全曲FM音源+PSGで演奏されます。効果音は再生されません。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>注意事項</h3>
+        <ul>
+            <li>パッチはMSX1版専用です。MSX2版には対応していません。</li>
+            <li>パッチは無保証です。自己責任でご利用ください。</li>
+        </ul>
+        <h3>謝辞</h3>
+        <ul>
+            <li>IPSパッチは <a href="http://mdpc.dousetsu.com/">MSX研鑽推進委員会</a> さまにご制作いただきました。</li>
+            <li>楽曲の演奏には <a href="https://gigamix.hatenablog.com/entry/mgsdrv/">MGSDRV</a> を利用させていただいています。MGSDRV (C)
+                Ain./Gigamix</li>
+        </ul>
+    </div>
 </body>
+<script>
+    function _dl(event) {
+        const target = event.srcElement.getAttribute('href');
+        gtag('event', 'download', { 'event_category': 'ips', 'event_label': target });
+    }
+    const as = document.querySelectorAll('a.ips');
+    for (var a of as) {
+        a.addEventListener('click', _dl);
+    }
+</script>
 
 </html>
