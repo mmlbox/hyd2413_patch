@@ -259,7 +259,8 @@
 </body>
 <script>
     function _dl(event) {
-        const target = event.srcElement.getAttribute('href');
+        const target = event.target.getAttribute('href');
+        console.log(target);
         gtag('event', 'download', { 'event_category': 'ips', 'event_label': target });
     }
     const as = document.querySelectorAll('a.ips');
