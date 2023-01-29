@@ -1,6 +1,8 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P96L01NGEX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,7 +19,7 @@
     }
 
     body {
-        font-family: sans-serif;
+        font-family: 'M PLUS 1p', serif;
         line-height: 160%;
         background: #fafafa;
         font-size: 14px;
@@ -29,6 +31,30 @@
         color: #0088ee;
     }
 
+    a.ips {
+        display: inline-block;
+        padding: 4px 8px;
+        color: #0088ee;
+        background-color: white;
+        font-weight: bold;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+    }
+
+    a.ips span {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    a.ips:hover {
+        background-color: #f0f0f0;
+    }
+
+    p {
+        margin: 1em 0;
+    }
+
     .page-header {
         background-color: #181818;
         padding: 32px;
@@ -36,7 +62,11 @@
     }
 
     .content {
-        padding: 32px;
+        margin: 32px;
+    }
+
+    .page-footer {
+        border-top: 1px solid #ddd;
     }
 
     .sbox {
@@ -81,20 +111,27 @@
         text-align: center;
     }
 
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: bold;
+    }
+
     h1 {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 100%;
         vertical-align: middle;
     }
 
     h1 .msx-music {
         display: inline-block;
-        vertical-align: top;
+        vertical-align: middle;
         background-image: url(./msx-music.svg);
-        background-size: 18px 18px;
+        background-size: 24px 24px;
         background-position: center;
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
     }
 
     h2 {
@@ -116,53 +153,90 @@
 
 <body>
     <div class="page-header">
-        <h1>HYDLIDE3 FMPAC Patch&nbsp;<div class="msx-music"></div>
+        <h1>HYDLIDE3 MSX FM Support Patch&nbsp;<div class="msx-music"></div>
         </h1>
     </div>
     <div class="content">
-        <p><a href="https://github.com/mmlbox/hyd2413">こちらのMGS</a>を元に、MSX1版ハイドライド3のBGMをFMPACに対応するIPSパッチです。</p>
-        <h3>DOWNLOAD</h3>
+        <p>MSX/MSX2版ハイドライド3のBGMをFMPACに対応するIPSパッチです。<br>
+            楽曲データは<a href="https://github.com/mmlbox/hyd2413">こちらのMGS</a>を元にしています。</p>
+        <h3>ダウンロード</h3>
+        <p>どれをダウンロードしてよいか分からない場合はタイプ FM+PSG をご利用ください。</p>
         <div class="sbox">
             <table>
                 <thead>
                     <tr>
-                        <th>TYPE</th>
+                        <th>タイプ</th>
                         </th>
-                        <th>IPS</th>
-                        <th>DESCRIPTION</th>
+                        <th colspan="2">ダウンロード</th>
+                        <th>説明</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>FM+PSG</td>
-                        <td><a href="./patches/hyd3_fp2.ips" class="ips">hyd3_fp2.ips</a></td>
+                        <td>
+                            <a href="./patches/msx1/hyd3_fp2.ips" class="ips">
+                                <span class="material-icons">download</span>MSX<sub>1</sub>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="./patches/msx2/hyd3_2_fp2.ips" class="ips">
+                                <span class="material-icons">download</span>MSX<sub>2</sub>
+                            </a>
+                        </td>
                         <td>BGMがFM音源、効果音がPSGで演奏されます。<br>
-                            OPや街など効果音が必要ない場所では、BGMがFM音源+PSGで演奏されます。<br>
-                            どれをダウンロードしてよいか分からない場合はこちらをご利用ください。</td>
+                            OPや街など効果音が必要ない場所では、BGMがFM音源+PSGで演奏されます。
+                        </td>
                     </tr>
                     <tr>
                         <td>FM+RHYTHM</td>
-                        <td><a href="./patches/hyd3_r.ips" class="ips">hyd3_r.ips</a></td>
+                        <td>
+                            <a href="./patches/msx1/hyd3_r.ips" class="ips">
+                                <span class="material-icons">download</span>MSX<sub>1</sub>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="./patches/msx2/hyd3_2_r.ips" class="ips">
+                                <span class="material-icons">download</span>MSX<sub>2</sub>
+                            </a>
+                        </td>
                         <td>BGMが全曲FM音源のみで演奏されます。効果音はPSGで再生されます。<br>
                             BGMのリズム音は"チャカポコ"になります。YM2413のファンの方にオススメ。</td>
                     </tr>
                     <tr>
                         <td>FM+NOISE</td>
-                        <td><a href="./patches/hyd3_f.ips" class="ips">hyd3_f.ips</a></td>
+                        <td><a href="./patches/msx1/hyd3_f.ips" class="ips">
+                                <span class="material-icons">download</span>MSX<sub>1</sub>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="./patches/msx2/hyd3_2_f.ips" class="ips">
+                                <span class=" material-icons">download</span>MSX<sub>2</sub>
+                            </a>
+                        </td>
                         <td>BGMが全曲FM音源のみで演奏されます。効果音はPSGで再生されます。<br>
                             BGMのリズム音はノイズ風音色になります。</td>
                     </tr>
                     <tr>
                         <td>FM+PSG (NO SE)</td>
-                        <td><a href="./patches/hyd3_fp1.ips" class="ips">hyd3_fp1.ips</a></td>
-                        <td>BGMが全曲FM音源+PSGで演奏されます。効果音は再生されません。</td>
+                        <td>
+                            <a href="./patches/msx1/hyd3_fp1.ips" class="ips">
+                                <span class="material-icons">download</span>MSX<sub>1</sub>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="./patches/msx2/hyd3_2_fp1.ips" class="ips">
+                                <span class="material-icons">download</span>MSX<sub>2</sub>
+                            </a>
+                        </td>
+                        <td>BGMが全曲FM音源+PSGで演奏されます。<br>効果音は再生されませんが、BGMがOPN版に最も近くなります。</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <h3>注意事項</h3>
+        <h3>ご注意</h3>
         <ul>
-            <li>パッチはMSX1版専用です。MSX2版には対応していません。</li>
+            <li>パッチはMSX<sub>1</sub>版とMSX<sub>2</sub>版で異なります。機種にあったパッチをダウンロードしてください。</li>
             <li>パッチは無保証です。自己責任でご利用ください。</li>
         </ul>
         <h3>謝辞</h3>
@@ -172,6 +246,7 @@
                 Ain./Gigamix</li>
         </ul>
     </div>
+    <div class="page-footer"></div>
 </body>
 <script>
     function _dl(event) {
