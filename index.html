@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P96L01NGEX"></script>
@@ -82,12 +83,12 @@
     table {
         border-radius: 6px;
         border-collapse: collapse;
-        font-size: 90%;
+        font-size: 14px;
         background-color: #fff;
         overflow: hidden;
     }
 
-    thead {
+    thead {                
         background-color: rgb(246, 248, 250);
         border-bottom: 1px solid rgb(208, 215, 222)
     }
@@ -138,19 +139,35 @@
 
     h2 {
         margin-top: 2em;
-        font-size: 16px;
+        font-size: 105%;
         margin-bottom: 1em;
     }
 
     h3 {
         margin-top: 2em;
-        font-size: 14px;
+        font-size: 100%;
         margin-bottom: 1em;
     }
 
     li {
         margin-left: -16px;
     }
+
+@media screen and (max-width: 479px) {
+    body {
+        font-size: 11px;
+    }
+    table {
+        font-size: 11px;
+    }
+    td {
+        padding: 0.5em 1em;
+    }
+    .content {
+        margin: 16px;
+    }
+}
+
 </style>
 
 <body>
@@ -160,7 +177,7 @@
     </div>
     <div class="content">
         <p>MSX/MSX2版ハイドライド3のBGMをFMPACに対応するIPSパッチです。<br>
-            楽曲データは<a href="https://github.com/mmlbox/hyd2413">こちらのMGS</a>を元にしています→<a href="https://youtu.be/EFIC1HU2tXQ">参考動画(YouTube)</a></p>
+            楽曲データは<a href="https://github.com/mmlbox/hyd2413">こちらのMGS</a>を元にしています→<a href="https://youtu.be/EFIC1HU2tXQ" target="youtube">参考動画(YouTube)</a></p>
         <h3>ダウンロード</h3>
         <p>
             パッチはMSX<sub>1</sub>版とMSX<sub>2</sub>版で異なります。機種にあったパッチをダウンロードしてください。<br>
@@ -205,7 +222,7 @@
                             BGMのリズム音はノイズ風音色になります。</td>
                     </tr>
                     <tr>
-                        <td>FM+PSG (NO SE)</td>
+                        <td>FM+PSG<br>(NO SE)</td>
                         <td>
                             <a href="./patches/msx1/hyd3_fp1.ips" class="ips">MSX<sub>1</sub></a>
                             <a href="./patches/msx2/hyd3_2_fp1.ips" class="ips">MSX<sub>2</sub></a>
@@ -227,11 +244,11 @@
             <li>
                 IPSパッチは <a href="http://mdpc.dousetsu.com/">MSX研鑽推進委員会</a> さまにご制作いただきました。
                 <ul>
-                    <li>MSX研鑽推進委員会さんによるIPS配布ページは<a href="https://mdpc.dousetsu.com/utility/msx/hyd3_fm.htm">こちら</a>です。
+                    <li>MSX研鑽推進委員会さんによるIPS配布ページは<a href="https://mdpc.dousetsu.com/utility/msx/hyd3_fm.htm" target="mdpc">こちら</a>です。
                     </li>
                 </ul>
             </li>
-            <li>楽曲の演奏には <a href="https://gigamix.hatenablog.com/entry/mgsdrv/">MGSDRV</a> を利用させていただきました。
+            <li>楽曲の演奏には <a href="https://gigamix.hatenablog.com/entry/mgsdrv/" target="mgsdrv">MGSDRV</a> を利用させていただきました。
                 <ul>
                     <li>MGSDRV (C) Ain./Gigamix</li>
                 </ul>
