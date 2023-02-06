@@ -239,6 +239,11 @@
             <li>MSX<sub>1</sub>用はメモリが64Kバイト必要です。</li>
             <li>パッチは無保証です。自己責任でご利用ください。</li>
         </ul>
+        <h3>更新履歴</h3>
+        <ul>
+            <li>2023-02-06 v1.1 街とフィールドの曲の演奏がズレる問題が修正されています。</li>
+            <li>2023-01-29 v1.0 初版</li>
+        </ul>
         <h3>謝辞</h3>
         <ul>
             <li>
@@ -260,7 +265,6 @@
 <script>
     function _dl(event) {
         const target = event.target.getAttribute('href');
-        console.log(target);
         gtag('event', 'download', { 'event_category': 'ips', 'event_label': target });
     }
     const as = document.querySelectorAll('a.ips');
